@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#numsDiv{
+    flex-direction: row;
+}
+
+#itemButtonsDiv{
+    flex-direction: row;
+}
+
+button{
+    height: 134px;
+    width: 104px;
+}
+
+img{
+    height: 130px;
+    width: 100px;
+}
