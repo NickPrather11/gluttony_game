@@ -13,7 +13,14 @@ console.log("goalNum " + goalNum);
 reset = function(){
     goalNum = Math.floor((Math.random() * 101) + 19);
     score = 0;
-    $("#winLoseCount").text("<div>" + "Wins: " + win + "</div>" + "<div>" + "Losses: " + lose + "</div>");
+    $("#goalNum").text(goalNum);
+    $("#winLoseCount").html("<div>" + "Wins: " + win + "</div>" + "<div>" + "Losses: " + lose + "</div>");
+    $("#score").text("Score: " + score);
+    ranValArray = [];
+    ranVals();
+    console.log("ranValArray " + ranValArray);
+    $("#itemButtonsDiv").empty();
+    buildRanValItems();
 };
 
 //assign random values to each button
@@ -26,14 +33,16 @@ ranVals = function(){
 ranVals();
 console.log("ranValArray " + ranValArray);
 
-for(i = 0; i < imgArray.length; i++){
-    var item = $("<img>");
-    item.attr("src", imgArray[i]);
-    item.attr("class", "itemButton");
-    item.attr("itemValue", ranValArray[i]);
-    $("#itemButtonsDiv").append(item);
+buildRanValItems = function(){
+    for(i = 0; i < imgArray.length; i++){
+        var item = $("<img>");
+        item.attr("src", imgArray[i]);
+        item.attr("class", "itemButton");
+        item.attr("itemValue", ranValArray[i]);
+        $("#itemButtonsDiv").append(item);
+    }
 }
-
+buildRanValItems();
 
 // Display goalNum and win/lose count
 $("#goalNum").text(goalNum);
@@ -45,17 +54,17 @@ $(".itemButton").on("click", function(){
     v = parseInt($(this).attr("itemValue"));
     score += v;
     $("#score").text("Score: " + score);
-    console.log("this item's value: " + v);
+    if(score === goalNum){
+        alert("You've Caught Your Ideal Buzz!");
+        win++;
+        reset();
+    } else if(score > goalNum){
+        alert("You Took Too Much, Man!")
+        lose++;
+        reset();
+    }
 })
 
 //if score variable equals goal number then Win, else if score variable > goal number Lose
-if(score === goalNum){
-    alert("You Win!");
-    win++;
-    reset();
-} else if(score > goalNum){
-    alert("You Got Sick!")
-    lose++;
-    reset();
-}
+
 
