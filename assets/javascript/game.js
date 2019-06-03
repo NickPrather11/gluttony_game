@@ -30,21 +30,22 @@ for(i = 0; i < imgArray.length; i++){
     var item = $("<img>");
     item.attr("src", imgArray[i]);
     item.attr("class", "itemButton");
-    item.attr("data-value", ranValArray[i]);
+    item.attr("itemValue", ranValArray[i]);
     $("#itemButtonsDiv").append(item);
 }
 
 
-
 // Display goalNum and win/lose count
 $("#goalNum").text(goalNum);
-$("#winLoseCount").text("<div>" + "Wins: " + win + "</div>" + "<div>" + "Losses: " + lose + "</div>");
+$("#winLoseCount").html("<div>" + "Wins: " + win + "</div>" + "<div>" + "Losses: " + lose + "</div>");
+$("#score").text("Score: " + score);
 
 //click event adding value of each button to score variable
 $(".itemButton").on("click", function(){
-    score += this.value;
-    $("#score").text(score);
-    console.log(score);
+    v = parseInt($(this).attr("itemValue"));
+    score += v;
+    $("#score").text("Score: " + score);
+    console.log("this item's value: " + v);
 })
 
 //if score variable equals goal number then Win, else if score variable > goal number Lose
