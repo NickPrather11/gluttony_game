@@ -45,11 +45,11 @@ buildRanValItems = function(){
 buildRanValItems();
 
 // Display goalNum and win/lose count
-$("#goalNum").text(goalNum);
+$("#goalNum").text("Goal: " + goalNum);
 $("#winLoseCount").html("<div>" + "Wins: " + win + "</div>" + "<div>" + "Losses: " + lose + "</div>");
 $("#score").text("Score: " + score);
 
-//click event adding value of each button to score variable
+//click event adding value of each button to score variable plus win/lose if statements
 $(".itemButton").on("click", function(){
     v = parseInt($(this).attr("itemValue"));
     score += v;
@@ -65,6 +65,6 @@ $(".itemButton").on("click", function(){
     }
 })
 
-//if score variable equals goal number then Win, else if score variable > goal number Lose
+
 
 

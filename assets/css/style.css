@@ -2,10 +2,40 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background-image: url("../images/memphis-mini-dark.png");
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f5f5f5;
+    font-size: 30px;
+}
+
+header{
+    margin: 0px;
+}
+
+h1{
+    font-family: 'Allura', cursive;
+    text-align: center;
+    font-size: 100px;
+    margin: 0px;
+}
+
+#goalNum, #score{
+    background-color: pink;
+    color: black;
+    padding: 15px;
+}
+
+#winLoseCount{
+    background-color: yellowgreen;
+    color: black;
+    padding: 15px;
 }
 
 #numsDiv{
     flex-direction: row;
+    justify-content: center;
+    margin: 20px;
 }
 
 #itemButtonsDiv{
@@ -19,5 +49,6 @@ button{
 
 img{
     height: 130px;
-    width: 100px;
+    width: 110px;
+    margin: 2px;
 }
