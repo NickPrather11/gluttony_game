@@ -14,7 +14,7 @@ reset = function(){
     goalNum = Math.floor((Math.random() * 101) + 19);
     score = 0;
     $("#goalNum").text(goalNum);
-    $("#winLoseCount").html("<div>" + "Wins: " + win + "</div>" + "<div>" + "Losses: " + lose + "</div>");
+    $("#winLoseCount").html("<div>" + "Wins: " + win + "  " + "Losses: " + lose + "</div>");
     $("#score").text("Score: " + score);
     ranValArray = [];
     ranVals();
