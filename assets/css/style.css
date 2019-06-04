@@ -32,6 +32,12 @@ h1{
     padding: 15px;
 }
 
+#instructions{
+    font-size: 20px;
+    width: 60%;
+    margin: 15px;
+}
+
 #numsDiv{
     flex-direction: row;
     justify-content: center;
