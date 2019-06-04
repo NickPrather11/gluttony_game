@@ -9,6 +9,10 @@ body{
     font-size: 30px;
 }
 
+div{
+    display: flex;
+}
+
 header{
     margin: 0px;
 }
@@ -33,9 +37,15 @@ h1{
 }
 
 #instructions{
+    flex-direction: column;
     font-size: 20px;
     width: 60%;
     margin: 15px;
+}
+
+P{
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
 }
 
 #numsDiv{

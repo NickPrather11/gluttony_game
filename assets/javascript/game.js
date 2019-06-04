@@ -46,7 +46,7 @@ buildRanValItems();
 
 // Display goalNum and win/lose count
 $("#goalNum").text("Goal: " + goalNum);
-$("#winLoseCount").html("<div>" + "Wins: " + win + "</div>" + "<div>" + "Losses: " + lose + "</div>");
+$("#winLoseCount").html("<div>" + "Wins: " + win + "</div>" + "  " + "<div>" + "Losses: " + lose + "</div>");
 $("#score").text("Score: " + score);
 
 //click event adding value of each button to score variable plus win/lose if statements
