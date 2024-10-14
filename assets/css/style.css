@@ -13,10 +13,6 @@ div {
   display: flex;
 }
 
-header {
-  margin: 0px;
-}
-
 h1 {
   font-family: "Allura", cursive;
   text-align: center;
@@ -27,11 +23,6 @@ h1 {
 P {
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
-}
-
-button {
-  height: 9rem;
-  width: 8rem;
 }
 
 img {
@@ -52,12 +43,13 @@ img {
 #numsDiv {
   flex-direction: row;
   justify-content: center;
-  width: 85%;
-  max-width: 35rem;
+  width: 90%;
+  max-width: 40rem;
   margin: 1rem;
 }
 
 #goal {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -73,6 +65,7 @@ img {
 }
 
 #score {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -97,11 +90,15 @@ img {
 }
 
 #wins {
+  display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 #losses {
+  display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 #itemButtonsDiv {

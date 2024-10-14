@@ -1,7 +1,7 @@
 # Gluttony! Game
 
 Deployed here:
-https://github.com/NickPrather11/gluttony_game
+https://nickprather11.github.io/gluttony_game/
 
 You will be given a random number at the start of the game. This represents your ideal, transcendental buzz acquired from gobbling down all the items.
 
