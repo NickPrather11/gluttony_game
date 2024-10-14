@@ -1,70 +1,111 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../images/memphis-mini-dark.png");
-    font-family: Arial, Helvetica, sans-serif;
-    color: #f5f5f5;
-    font-size: 30px;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/memphis-mini-dark.png");
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f5f5f5;
+  font-size: 30px;
 }
 
-div{
-    display: flex;
+div {
+  display: flex;
 }
 
-header{
-    margin: 0px;
+header {
+  margin: 0px;
 }
 
-h1{
-    font-family: 'Allura', cursive;
-    text-align: center;
-    font-size: 100px;
-    margin: 0px;
+h1 {
+  font-family: "Allura", cursive;
+  text-align: center;
+  font-size: 100px;
+  margin: 0px;
 }
 
-#goalNum, #score{
-    background-color: pink;
-    color: black;
-    padding: 15px;
+P {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 
-#winLoseCount{
-    background-color: yellowgreen;
-    color: black;
-    padding: 15px;
+button {
+  height: 9rem;
+  width: 8rem;
 }
 
-#instructions{
-    flex-direction: column;
-    font-size: 20px;
-    width: 60%;
-    margin: 15px;
+img {
+  height: 9rem;
+  width: 8rem;
+  margin: 0.125rem;
 }
 
-P{
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
+#instructions {
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1rem;
+  width: 80%;
+  max-width: 35rem;
+  margin: 1rem;
 }
 
-#numsDiv{
-    flex-direction: row;
-    justify-content: center;
-    margin: 20px;
+#numsDiv {
+  flex-direction: row;
+  justify-content: center;
+  width: 85%;
+  max-width: 35rem;
+  margin: 1rem;
 }
 
-#itemButtonsDiv{
-    flex-direction: row;
+#goal {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: pink;
+  color: black;
+  padding: 1rem;
+  text-align: center;
 }
 
-button{
-    height: 134px;
-    width: 104px;
+#goalNum {
+  justify-content: center;
+  text-align: center;
 }
 
-img{
-    height: 130px;
-    width: 110px;
-    margin: 2px;
+#score {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: yellowgreen;
+  color: black;
+  padding: 1rem;
+  text-align: center;
+}
+
+#scoreNum {
+  justify-content: center;
+  text-align: center;
+}
+
+#winLoseCount {
+  display: flex;
+  flex-direction: column;
+  background-color: pink;
+  color: black;
+  padding: 1rem;
+  text-align: center;
+}
+
+#wins {
+  flex-direction: row;
+}
+
+#losses {
+  flex-direction: row;
+}
+
+#itemButtonsDiv {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
