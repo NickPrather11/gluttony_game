@@ -2,11 +2,11 @@
 
 var ranValArray = [];
 var imgArray = [
-  "assets/images/whiskey.png",
-  "assets/images/beer.jpg",
-  "assets/images/cigarette.jpg",
   "assets/images/pizza.png",
+  "assets/images/beer.png",
   "assets/images/chocolate_bar.png",
+  "assets/images/tequila.png",
+  "assets/images/cigarette.png",
 ];
 var goal = Math.floor(Math.random() * 101 + 19);
 var score = 0;
@@ -30,12 +30,11 @@ function generateRandomValues() {
 
 function buildButtons() {
   for (i = 0; i < imgArray.length; i++) {
-    var item = $("<img>").attr("src", imgArray[i]);
-    var button = $("<button>")
+    var item = $("<img>")
+      .attr("src", imgArray[i])
       .attr("class", "itemButton")
-      .attr("itemValue", ranValArray[i])
-      .append(item);
-    $("#itemButtonsDiv").append(button);
+      .attr("itemValue", ranValArray[i]);
+    $("#itemButtonsDiv").append(item);
   }
 }
 
